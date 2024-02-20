@@ -1,3 +1,4 @@
+import axios from 'axios'
 import {Types} from "./types"
 
 export const increaseCount = (data) => {
@@ -24,6 +25,15 @@ export const addTodo = (data) => {
     type: Types.addTodo,
     payload: data
   }
+}
+
+//Trả về function
+export const addToDoAsync = () => async(dispatch) => {
+  const res =  await axios.get("https://jsonplaceholder.typicode.com/todos/1");
+  dispatch(addTodo({
+    name: res.data.title,
+    id: Math.random(),
+}))
 }
 
 export const deleteTodo = (data) => {

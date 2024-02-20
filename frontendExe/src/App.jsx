@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import { store } from "./redux/strore";
-import { increaseCount, decreaseCount, addTodo, deleteTodo } from "./redux/action";
+import { increaseCount, decreaseCount, addTodo, deleteTodo, addToDoAsync } from "./redux/action";
 import { connect, useDispatch, useSelector } from "react-redux";
+import axios from 'axios';
 
 function App(props) {
   const dispatch = useDispatch();
@@ -11,6 +12,13 @@ function App(props) {
   console.log("todos", todos);
 
   const [name, setName] = useState("");
+
+  const fetchTodo = async() => {
+    
+    console.log('res', res);
+ 
+  }
+
   const handleIncrease = () => {
     props.increaseCount(10);
   };
@@ -24,10 +32,8 @@ function App(props) {
   };
 
   const handleAddTodo = () => {
-    dispatch(addTodo({
-        name,
-        id: Math.random(),
-    }))
+    dispatch(addToDoAsync())
+    setName('')
   };
 
   const handleDeleteTodo = (id) => {
