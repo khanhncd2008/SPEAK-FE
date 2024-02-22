@@ -10,6 +10,7 @@ const linkStyle = {
 };
 
 function Login() {
+  
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -116,9 +117,7 @@ function Login() {
             <Link to="/register" style={{...linkStyle, marginRight: "4rem"}}>
               Or Sign Up
             </Link>
-            <a style={linkStyle}>
-              Login in as Tutor
-            </a>
+            
           </div>
         </Col>
 
