@@ -14,7 +14,7 @@ pip install -r requirements.txt
 To run the application, use the following command from the root directory of the project:
 
 ```bash
-uvicorn api.main:app --reload
+uvicorn main:app --reload
 ```
 
 Then, you can access the application at http://localhost:8000.
