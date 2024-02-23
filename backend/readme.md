@@ -21,3 +21,4 @@ Then, you can access the application at http://localhost:8000.
 
 API Endpoints
 To test the application, you can visit http://localhost:8000/docs 
+![alt text](image.png)
