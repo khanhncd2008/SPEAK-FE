@@ -1,0 +1,108 @@
+
+  .video{
+    background-color: #2a77c3;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .canvas{
+    background-color: #2a77c3;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 5px;
+    min-height: 200px;
+  }
+  @media screen and (max-width: 800px) {
+    .canvas{
+      object-fit: contain;
+    }
+    .video {
+      object-fit: contain;
+    }
+  }
+  .background-disabled{
+    display: none;
+  }
+  .background-enabled{
+    display: block;
+  }
+  .background1 {
+    background-image: url(https://ieced.com.ec/assets/bg1.jpg);
+    background-size: cover;
+  }
+  .background2 {
+    background-image: url(https://ieced.com.ec/assets/videollamada/1.jpg);
+    background-size: cover;
+  }
+  .background3 {
+    background-image: url(https://ieced.com.ec/assets/videollamada/2.jpg);
+    background-size: cover;
+  }
+  .background4 {
+    background-image: url(https://ieced.com.ec/assets/videollamada/3.jpg);
+    background-size: cover;
+  }
+
+  .participant {
+    background-color: #353b48;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 5px;
+    min-height: 200px
+  }
+  .none-img {
+    display: none;
+  }
+
+  .muted {
+    color: #fff;
+    right: 10px;
+    position: absolute;
+    top: 10px;
+    background: #353b48;
+    border-radius: 50%;
+    height: 22px;
+    width: 22px!important;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    font-size: 150px;
+    font-family: roboto, arial;
+    color: white;
+    text-align: center;
+    background: orange;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  .name {
+    color: white;
+    bottom: 10px;
+    position: absolute;
+    left: 20px;
+  }
+
+  @media (max-width: 800px) {
+    .participant{
+      min-height: 0px;
+    }
+    .avatar {
+      width: 80px;
+      height: 80px;
+      font-size: 50px;
+    }
+  }
